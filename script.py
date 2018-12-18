@@ -57,11 +57,12 @@ class DynamicRoutingTest(Topo):
         self.addLink(hD, D)
         self.addLink(hE, E)
 
-        self.addLink(A,B)
-        self.addLink(B,C)
-        self.addLink(C,D)
-        self.addLink(D,E)
-        self.addLink(E,B)
+        self.addLink(B,A)
+        self.addLink(C,B)
+        self.addLink(D,C)
+        self.addLink(E,D)
+        self.addLink(B,E)
+        #self.addLink(E,B)
 
 TOPOS = {'LinearTopo':(lambda:LinearTopo()),
          'DynamicRoutingTest':(lambda:DynamicRoutingTest())}
