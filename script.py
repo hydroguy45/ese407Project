@@ -39,6 +39,7 @@ class LinearTopo( Topo ):
 class DynamicRoutingTest(Topo):
     def build( self, **_opts):
         #test = self.addHost('x')
+        
         hA = self.addHost('h1')
         hB = self.addHost('h2')
         hC = self.addHost('h3')
@@ -63,6 +64,7 @@ class DynamicRoutingTest(Topo):
         self.addLink(E,D)
         self.addLink(B,E)
         #self.addLink(E,B)
+
 
 TOPOS = {'LinearTopo':(lambda:LinearTopo()),
          'DynamicRoutingTest':(lambda:DynamicRoutingTest())}
